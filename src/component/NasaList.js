@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
+
 import axios from "axios";
 import NasaCard from "./NasaCard";
 
+import {
+  Card, CardImg, CardText, CardBody, CardLink,
+  CardTitle, CardSubtitle
+} from 'reactstrap'
 
 export default function NasaList() {
   const [nasa, setNasa] = useState([]);
@@ -24,7 +29,7 @@ export default function NasaList() {
     <div>
       {nasa.map((planets, id) => {
         return (
-          <div>
+          <Card  body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
             <NasaCard
               key={id}
               name={planets.name}
@@ -35,7 +40,7 @@ export default function NasaList() {
               terrain={planets.terrain}
                 
             />
-          </div>
+          </Card>
         );
       })}
     </div>

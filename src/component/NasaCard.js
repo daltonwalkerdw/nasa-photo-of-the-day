@@ -1,16 +1,21 @@
 import React from "react";
-
+import {
+  Card, CardImg, CardText, CardBody, CardLink,
+  CardTitle, CardSubtitle
+} from 'reactstrap'
 
 const NasaCard = props => {
   return (
-      <div className="card">
-           <h2>{props.name}</h2>
-           <p>Population: {props.population}</p>
-           <p>Climate: {props.climate}</p>
-           <p>Diameter: {props.diameter}</p>
-           <p>Orbital Period: {props.orbitalPeriod}</p>
-           <p>Terrain: {props.terrain}</p>
-    </div>
+      // <Card>
+        <CardBody body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+           <CardTitle>{props.name}</CardTitle>
+           <CardText>Population: {props.population}</CardText>
+           <CardText>Climate: {props.climate}</CardText>
+           <CardText>Diameter: {props.diameter}</CardText>
+           <CardText>Orbital Period: {props.orbitalPeriod}</CardText>
+           <CardText>Terrain: {props.terrain}</CardText>
+        </CardBody>
+    // {/* </Card> */}
   );
 };
 
